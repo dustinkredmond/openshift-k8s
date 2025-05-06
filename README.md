@@ -1,5 +1,5 @@
 # openshift-k8s
-OpenShift Kubernetes Scripts &amp; Commands
+My collection of OpenShift Kubernetes Scripts &amp; Commands
 
 ### Note
 Most of these scripts are going to exclusively use the `oc` CLI client rather than `kubectl`.
