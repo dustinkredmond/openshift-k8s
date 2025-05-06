@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app.kubernetes.io/instance: myapp-deployment
+  name: myapp-service-monitor
+  namespace: myapp
+spec:
+  endpoints:
+  - scheme: http
+    targetPort: status
+  - scheme: http
+    targetPort: cmetrics
+  jobLabel: scrape-job
+  namespaceSelector:
+    matchNames:
+    - myapp
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: myapp-deployment
